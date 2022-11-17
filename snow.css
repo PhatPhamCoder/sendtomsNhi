@@ -1,0 +1,87 @@
+*,
+*::after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-align: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  font-size: 16px;
+  margin: 0;
+  background: #fff;
+  color: #000;
+}
+audio {
+  display: none;
+}
+.snow_wrap {
+  height: 100%;
+  width: 100%;
+  background: url(https://wallpaperaccess.com/full/363546.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  overflow: hidden;
+}
+
+.snow,
+.snow:after,
+.snow:before {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 50px, #fff, transparent),
+    radial-gradient(4px 4px at 300px 150px, #fff, transparent),
+    radial-gradient(4px 4px at 400px 250px, #fff, transparent),
+    radial-gradient(4px 4px at 500px 350px, #fff, transparent),
+    radial-gradient(4px 4px at 50px 100px, #fff, transparent),
+    radial-gradient(4px 4px at 150px 300px, #fff, transparent),
+    radial-gradient(4px 4px at 250px 400px, #fff, transparent),
+    radial-gradient(4px 4px at 50px 400px, #fff, transparent),
+    radial-gradient(4px 4px at 50px 100px, #fff, transparent),
+    radial-gradient(4px 4px at 150px 300px, #fff, transparent),
+    radial-gradient(4px 4px at 500px 350px, #fff, transparent),
+    radial-gradient(4px 4px at 400px 250px, #fff, transparent),
+    radial-gradient(4px 4px at 500px 350px, #fff, transparent),
+    radial-gradient(4px 4px at 350px 500px, #fff, transparent);
+  background-size: 650px 650px;
+  animation: snowAnim 3s linear;
+  animation-iteration-count: infinite;
+}
+
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-direction: reverse;
+  animation-duration: 9s;
+}
+
+.snow:before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+@keyframes snowAnim {
+  form {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(650px);
+  }
+}
+
+.typing {
+  position: absolute;
+  top: 25%;
+  left: 100px;
+  font-size: 18px;
+  color: #fff;
+}
